@@ -1,0 +1,14 @@
+<div class="content-container">
+
+    <div class="skills-container">
+        <div *ngFor="let skill of skill_images; let i = index" style="display: flex; flex-direction: column;"><img src="assets/img/my-skills-section/{{skill_images[i]}}" alt="">{{skill_names[i]}}</div>
+    </div>
+
+    <div>
+        <h1>My skills</h1>
+        <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
+        <button> Get in touch</button>
+    </div>
+
+
+</div>
