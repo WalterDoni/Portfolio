@@ -1,5 +1,9 @@
 header{
-    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     background-color: #141D2F;
     height: 110px;
     display: flex;

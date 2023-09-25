@@ -7,12 +7,65 @@
     color: white;
     display: flex;
     height: 800px;
+    padding-top: 200px;
+
 }
 
-.skills-container{
+
+
+.skills-images-container{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 54px
-    ;
+    max-height: 280px;
+    max-width: 720px;
+    padding-left: 100px;
+    gap: 54px;
+    z-index: 2;
+
+    img{
+        width: 60px;
+        height: 60px;
+        padding-bottom: 8px;
+       
+    }
+}
+.skills-description-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+   
+  
+
+    h1{
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 108px;
+       
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    button{
+        width: 200px;
+        height: 58px;
+        background-color: #00BEE8;
+        padding: 15px 30px 15px 30px;
+        border-radius: 10px;
+        border:none;
+        color: white;
+        font-size: 23px;
+    }
+}
+
+.seperator{
+    margin-top: 55px;
+    width: 58px;
+    height: 4px;
+    background-color: #4B47FF;
 }
 

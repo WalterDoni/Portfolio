@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 export class MySkillsSectionComponent {
 
-skill_images = ['Angular.png','CSS.png','Firebase.png','git.png','html.png','Javascript.png','Materialdesign.png','Rest-Api.png','scrum.png','TypeScript.png'];
-skill_names = ['Angular','CSS','Firebase','Github','HTML','Javascript','Materialdesign','Rest-Api','Scrum','TypeScript'];
+skill_images = ['Angular.png','TypeScript.png','Javascript.png','HTML.png','Firebase.png','GitHub.png','CSS.png','Rest-Api.png','scrum.png','Materialdesign.png'];
+skill_names = ['Angular','TypeScript','Javascript','HTML','Firebase','GitHub','CSS','Rest-Api','Scrum','Materialdesign'];
 
 }
