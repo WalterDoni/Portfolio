@@ -1,14 +1,13 @@
 .content-container{
     position: relative;
     z-index: 2;
-    bottom: 35px;
     width: 100%;
     background-color: #141D30;
     color: white;
     display: flex;
-    height: 800px;
+    height: 600px;
     padding-top: 200px;
-
+ 
 }
 
 
@@ -28,43 +27,74 @@
         height: 60px;
         padding-bottom: 8px;
        
+
+        &:hover{
+            animation: moving 1s linear infinite ;
+        }
     }
 }
+
+
+@keyframes moving {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    75% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .skills-description-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-right: 100px;
-   
-  
-
     h1{
         font-size: 90px;
         font-weight: 700;
         line-height: 108px;
+        margin-bottom: 20px;
        
     }
 
     p{
         font-size: 16px;
+        margin-bottom: 20px;
     }
 
     button{
         width: 200px;
-        height: 58px;
+        height: 60px;
         background-color: #00BEE8;
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
         border:none;
         color: white;
         font-size: 23px;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover{
+           
+            transform: scale(1.1);
+            cursor: pointer;
+            background-color: #4B47FF;
+        }
     }
 }
 
 .seperator{
     margin-top: 55px;
-    width: 58px;
+    width: 100px;
     height: 4px;
     background-color: #4B47FF;
 }

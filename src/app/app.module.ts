@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -9,6 +8,8 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
 import { MySkillsSectionComponent } from './my-skills-section/my-skills-section.component';
 import { PortfolioHeadlineComponent } from './portfolio-headline/portfolio-headline.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
+import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,8 @@ import { ProjectsSectionComponent } from './projects-section/projects-section.co
     MySkillsSectionComponent,
     PortfolioHeadlineComponent,
      ProjectsSectionComponent,
+     ContactSectionComponent,
+     FooterComponent,
   
   ],
   imports: [

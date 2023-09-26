@@ -1,9 +1,11 @@
 .content-container {
-   padding-top: 100px;
+    position: relative;
+    top:35px;
+    padding-top: 130px;
     background-color: #141D2F;
     color: white;
     display: flex;
-    height: 1280px;
+    height: 1180px;
 }
 
 .photo-container {
@@ -16,59 +18,102 @@
 .photoBig {
     position: absolute;
     height: 1000px;
-    bottom: 400px;
+    bottom: 350px;
     left: 100px;
 }
 
 .text-container {
-    height: 80%;
+    height: 50%;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 64px;
+
+    button{
+        margin-left: 200px;
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 160px;
+        border-radius: 10px;
+        font-size: 23px;
+        background-color: #00BEE8;
+        color: white;
+        border: none;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover{
+           
+            transform: scale(1.1);
+            cursor: pointer;
+            background-color: #4B47FF;
+        }
+    }
 }
 
-.curved-seperator{
+.curved-seperator {
     position: absolute;
     width: 100%;
     top: 630px;
 
-    @media (max-width: 2000px){
+    @media (max-width: 2000px) {
         top: 650px;
     }
-    @media (max-width: 1680px){
+
+    @media (max-width: 1680px) {
         top: 670px;
     }
-    @media (max-width: 1500px){
+
+    @media (max-width: 1500px) {
         top: 700px;
     }
-    @media (max-width: 1270px){
+
+    @media (max-width: 1270px) {
         top: 730px;
     }
 }
 
-.network-container{
+.network-container {
     position: relative;
     display: flex;
     align-items: center;
     gap: 42px;
     font-size: 23px;
     color: white;
-    bottom: 165px;
+    bottom: 270px;
 
-    img{
+    img {
         height: 30px;
+        transition: transform 0.3s ease-in-out;
+        
+        &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
     }
-}
 
-.small-line{
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+      
+      &:hover {
+        text-decoration: underline solid #00BEE8;
+        
+      }}
+
+    }
+
+.small-line {
     width: 100px;
     height: 4px;
     background-color: #4B47FF;
 }
 
-.scroll{
+.scroll {
     position: absolute;
     color: white;
     right: 100px;
@@ -87,15 +132,19 @@
     0% {
         transform: translateX(0);
     }
+
     25% {
         transform: translateX(10px);
     }
+
     50% {
         transform: translateX(20px);
     }
+
     75% {
         transform: translateX(10px);
     }
+
     100% {
         transform: translateX(0);
     }

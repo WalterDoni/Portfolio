@@ -1,0 +1,54 @@
+.content-container {
+    position: relative;
+    background-color: #141D30;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 4px solid #00BEE8;
+    height: 300px;
+    font-size: 23px;
+    z-index: 1;
+
+    a{
+        color: white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline solid #00BEE8;
+            
+          }}
+        }
+
+
+.name {
+    width: 150px;
+    display: flex;
+    font-size: 40px;
+    font-weight: 700;
+    ;
+}
+
+.letter-t {
+    color: #4B47FF;
+}
+
+.letter-r {
+    color: #00BEE8;
+}
+
+.icons {
+    padding-right: 100px;
+
+    img {
+        padding-right: 50px;
+        height: 30px;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+
+        }
+    }
+}
