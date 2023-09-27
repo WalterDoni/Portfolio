@@ -4,7 +4,13 @@
     width: 100%;
     height: 300px;
     color: white;
+
+    @media(max-width:1320px){
+        padding-top: 300px;
+    }
 }
+
+
 .headline-portfolio{
     display: flex;
     justify-content: flex-end;

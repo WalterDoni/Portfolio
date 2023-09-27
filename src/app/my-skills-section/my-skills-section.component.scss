@@ -1,4 +1,4 @@
-.content-container{
+.content-container {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -7,12 +7,32 @@
     display: flex;
     height: 600px;
     padding-top: 200px;
+
+
+    @media(max-width:1320px) {
+        flex-direction: column-reverse;
+        padding-top: 50px;
+    }
+}
+
+.left-cont{
+    width: 60%;
+
+    @media(max-width:1320px) {
+       width: 100%;
+    }
+}
+
+.right-cont{
+    width: 40%;
+    @media(max-width:1320px) {
+        width: 100%;
+        padding-bottom: 100px;
+     }
  
 }
 
-
-
-.skills-images-container{
+.skills-images-container {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -22,15 +42,19 @@
     gap: 54px;
     z-index: 2;
 
-    img{
+    img {
         width: 60px;
         height: 60px;
         padding-bottom: 8px;
-       
 
-        &:hover{
-            animation: moving 1s linear infinite ;
+
+        &:hover {
+            animation: moving 1s linear infinite;
         }
+    }
+
+    @media(max-width:1320px) {
+        width: 100%;
     }
 }
 
@@ -39,63 +63,94 @@
     0% {
         transform: translateY(0);
     }
+
     25% {
         transform: translateY(5px);
     }
+
     50% {
         transform: translateY(10px);
     }
+
     75% {
         transform: translateY(5px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
 
-.skills-description-container{
+.skills-description-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-right: 100px;
-    h1{
+
+    h1 {
         font-size: 90px;
         font-weight: 700;
         line-height: 108px;
         margin-bottom: 20px;
-       
+
+
+        @media(max-width: 1350px) {
+            font-size: 80px;
+            margin-right: 100px;
+        }
     }
 
-    p{
+    p {
         font-size: 16px;
         margin-bottom: 20px;
+
+        @media(max-width:1320px) {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
     }
 
-    button{
+    button {
         width: 200px;
         height: 60px;
         background-color: #00BEE8;
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
-        border:none;
+        border: none;
         color: white;
         font-size: 23px;
         transition: transform 0.3s ease-in-out;
 
-        &:hover{
-           
+        &:hover {
+
             transform: scale(1.1);
             cursor: pointer;
             background-color: #4B47FF;
         }
+        @media(max-width:1320px) {
+        position: absolute;
+        top: 830px;
+        right: 35%;
+        }
+    
+    }
+
+    @media(max-width:1320px) {
+        
+        align-items: flex-end;
     }
 }
 
-.seperator{
+.seperator {
     margin-top: 55px;
     width: 100px;
     height: 4px;
     background-color: #4B47FF;
-}
 
+    @media(max-width:1320px) {
+        position: absolute;
+        right: 0;
+        top: 100px;
+    }
+}
