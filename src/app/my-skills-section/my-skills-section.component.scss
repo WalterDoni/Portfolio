@@ -15,21 +15,22 @@
     }
 }
 
-.left-cont{
+.left-cont {
     width: 60%;
 
     @media(max-width:1320px) {
-       width: 100%;
+        width: 100%;
     }
 }
 
-.right-cont{
+.right-cont {
     width: 40%;
+
     @media(max-width:1320px) {
         width: 100%;
         padding-bottom: 100px;
-     }
- 
+    }
+
 }
 
 .skills-images-container {
@@ -41,6 +42,19 @@
     padding-left: 100px;
     gap: 54px;
     z-index: 2;
+    
+    div{
+        display: flex; 
+        justify-content: center; 
+        align-items: center ;
+        flex-direction: column;
+        padding-right: 65px;
+
+        @media(max-width:1320px) {
+           padding-right: 0;
+         }
+    }
+
 
     img {
         width: 60px;
@@ -51,10 +65,19 @@
         &:hover {
             animation: moving 1s linear infinite;
         }
+
+        @media(max-width:1320px) {
+           width: 40px;
+           height: 40px;
+        }
     }
 
     @media(max-width:1320px) {
-        width: 100%;
+       
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 34px;
+       
     }
 }
 
@@ -99,6 +122,17 @@
             font-size: 80px;
             margin-right: 100px;
         }
+
+        @media(max-width: 1320px) {
+            font-size: 45px;
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+
+        @media(max-width: 450px) {
+            font-size: 38px;
+
+        }
     }
 
     p {
@@ -106,8 +140,7 @@
         margin-bottom: 20px;
 
         @media(max-width:1320px) {
-            margin-right: 20px;
-            margin-left: 20px;
+          padding-left: 20px;
         }
     }
 
@@ -128,17 +161,25 @@
             cursor: pointer;
             background-color: #4B47FF;
         }
+
         @media(max-width:1320px) {
-        position: absolute;
-        top: 830px;
-        right: 35%;
+            position: absolute;
+            top: 830px;
+            right: 35%;
         }
-    
+
+        @media(max-width: 400px){
+            height: 50px;
+            width: 160px;
+            padding: 5px 10px 5px 10px;
+           
+        }
+
     }
 
     @media(max-width:1320px) {
-        
         align-items: flex-end;
+        padding-right: 20px;
     }
 }
 
@@ -149,8 +190,34 @@
     background-color: #4B47FF;
 
     @media(max-width:1320px) {
+        margin-top: 0;
         position: absolute;
         right: 0;
+        top: 169px;
+        width: 20px;
+    }
+
+    @media(max-width:876px) {
+        top: 145px;
+    }
+
+    @media(max-width:480px) {
+        top: 120px;
+    }
+
+    @media(max-width:380px) {
         top: 100px;
+    }
+
+}
+
+
+.bg-image{
+    position: absolute; 
+    left: 0; z-index: -1;
+    top: 290px;
+
+    @media(max-width: 1320px){
+        top: 120px;
     }
 }

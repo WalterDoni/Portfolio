@@ -1,7 +1,7 @@
 <div class="content-container">
 <div class="left-cont">
     <div class="skills-images-container">
-        <div *ngFor="let skill of skill_images; let i = index" style="display: flex; justify-content: center; align-items: center ;flex-direction: column;padding-right: 65px;"><img src="assets/img/my-skills-section/{{skill_images[i]}}" alt="">{{skill_names[i]}}</div>
+        <div *ngFor="let skill of skill_images; let i = index"><img src="assets/img/my-skills-section/{{skill_images[i]}}" alt="">{{skill_names[i]}}</div>
     </div>
 </div>
 <div  class="right-cont">
@@ -12,5 +12,5 @@
     </div>
 </div>
 <div class="seperator"></div>
-<img style="position: absolute; left: 0; z-index: -1; top: 290px;"src="assets/img/my-skills-section/L. blue 1.png">
+<img class="bg-image" src="assets/img/my-skills-section/L. blue 1.png">
 </div>

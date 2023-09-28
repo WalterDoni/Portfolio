@@ -46,6 +46,10 @@ header{
             color: #00BEE8;
         }
     }
+
+    @media(max-width: 1320px){
+        display: none;
+    }
 }
 
 

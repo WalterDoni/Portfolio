@@ -6,6 +6,9 @@
     height: 700px;
     color: white;
    
+    @media(max-width: 1320px){
+        height: unset;
+    }
 }
 
 .about-me-container{
@@ -17,14 +20,22 @@
     justify-content: center;
     flex-direction: column;
     gap:35px;
+    z-index: 1;
+  
 
     h1{
-        font-size: 90px;
+        font-size: 90px!important;
+
+        @media(max-width: 1320px){
+            font-size: 45px!important;
+        }
     }
 
     
     @media(max-width: 1320px){
         width: 100%;
+        padding-left: 25px;
+      padding-right: 25px;
     }
 }
 
