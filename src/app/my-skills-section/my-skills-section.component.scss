@@ -214,10 +214,12 @@
 
 .bg-image{
     position: absolute; 
-    left: 0; z-index: -1;
+    left: 0;
+    z-index: -1;
     top: 290px;
 
     @media(max-width: 1320px){
         top: 120px;
+        left: -25px;
     }
 }
