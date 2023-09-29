@@ -1,4 +1,4 @@
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,46 +11,133 @@ header{
     align-items: center;
     color: white;
     padding: 0 100px 0 100px;
+
+    @media(max-width: 1320px){
+        padding: 0 100px 0 25px;
+    }
 }
 
-.name{
+.name {
     width: 150px;
     display: flex;
     font-size: 40px;
-    font-weight: 700;;
+    font-weight: 700;
+    
+    
+    &:hover{
+        cursor: pointer;
+        text-shadow: 0px 0px 8px rgba(0, 190, 232, 0.4);
+     }
 }
 
-.letter-t{
+.letter-t {
     color: #4B47FF;
 }
 
-.letter-r{
+.letter-r {
     color: #00BEE8;
 }
 
-.links{
+.links {
     width: 324px;
     display: flex;
     gap: 29px;
     cursor: pointer;
 
 
-    a{
+    a {
         color: white;
         font-size: 23px;
         font-weight: 400;
         line-height: 27.6px;
         text-decoration: none;
-
-        &:hover{
+    
+        &:hover {
             color: #00BEE8;
+            text-shadow: 0px 0px 8px rgba(0, 190, 232, 0.4);
         }
     }
 
-    @media(max-width: 1320px){
+    @media(max-width: 1320px) {
         display: none;
     }
 }
 
+//--Burger-Btn--//
+
+.burger-btn {
+    display: none;
+    top: 50px;
+    right: 0;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 50px;
+    cursor: pointer;
+
+    @media (max-width: 1320px){
+        display: unset;
+    }
+}
+
+.burger-btn:before,
+.burger-btn:after,
+.burger-btn div {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s;
+}
+
+.burger-btn.clicked:before {
+    transform: translateY(12px) rotate(135deg);
+    background-color: #00BEE8;
+}
+
+.burger-btn.clicked:after {
+    transform: translateY(-12px) rotate(-135deg);
+    background-color: #00BEE8;
+}
+
+.burger-btn.clicked div {
+    transform: scale(0);
+}
 
 
+.resp-menu-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(27, 39, 64, 0.8);
+    top: 0;
+    left: 100%;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+    width: 100%;
+    transition: left 0.5s ease;
+
+    :active {
+        left: 0;
+    }
+
+    a {
+        font-size: 23px;
+        text-decoration: none;
+        color: white;
+        padding-bottom: 20px;
+    }
+
+    @media(max-width: 1320px){
+        display: flex;
+    }
+
+}
+
+.active-menu {
+    left: 0;
+}

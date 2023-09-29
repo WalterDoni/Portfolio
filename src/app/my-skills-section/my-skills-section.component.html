@@ -1,4 +1,4 @@
-<div class="content-container">
+<div class="content-container" id="mySkills">
 <div class="left-cont">
     <div class="skills-images-container">
         <div *ngFor="let skill of skill_images; let i = index"><img src="assets/img/my-skills-section/{{skill_images[i]}}" alt="">{{skill_names[i]}}</div>
@@ -8,7 +8,7 @@
     <div class="skills-description-container">
         <h1>My skills</h1>
         <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
-        <button> Get in touch</button>
+        <button><a href="#contactMe">Get in touch</a></button>
     </div>
 </div>
 <div class="seperator"></div>

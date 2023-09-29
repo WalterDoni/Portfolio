@@ -1,8 +1,25 @@
 <header>
-    <span class="name"><p>Wal</p><p class="letter-t">t</p><p>e</p><p class="letter-r">r</p></span>
+    <a href="#headline" style="color: white; text-decoration: none;"><span class="name">
+            <p>Wal</p>
+            <p class="letter-t">t</p>
+            <p>e</p>
+            <p class="letter-r">r</p>
+        </span></a>
     <span class="links">
-        <a href="">About me</a>
-        <a href="">Skills</a>
-        <a href="">Portfolio</a>
+        <a href="#aboutMe">About me</a>
+        <a href="#mySkills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
     </span>
+
+    <div class="burger-btn" (click)="showMenu()" [class.clicked]="burgermenu">
+        <div></div>
+    </div>
+
+    <div class="resp-menu-container" [class.active-menu]="burgermenu">
+        <a href="#aboutMe">About me</a>
+        <a href="#mySkills">My skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contactMe">Contact</a>
+
+    </div>
 </header>
