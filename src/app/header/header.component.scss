@@ -77,6 +77,10 @@ header {
     @media (max-width: 1320px){
         display: unset;
     }
+
+    @media (max-width: 600px){
+        width: 35px;
+    }
 }
 
 .burger-btn:before,
@@ -89,6 +93,10 @@ header {
     border-radius: 3px;
     margin: 7px 0;
     transition: 0.5s;
+
+    @media (max-width: 600px){
+        height: 4px;
+    }
 }
 
 .burger-btn.clicked:before {
