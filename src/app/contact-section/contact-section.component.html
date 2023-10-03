@@ -10,12 +10,12 @@
          <p>Need a Frontend developer? <b>Contact me!</b></p>
         </span>
         <span  class="halfwidth" style="display: flex; justify-content: center;" >
-            <form action="https://w01e6044.kasserver.com/send_mail/send_mail/send_mail.php">
-                <input type="text"  name="name" placeholder="Your name...">
-                <input type="text" placeholder="Your email...">
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Your message..."></textarea>
+            <form (submit)="sendMail()" ngNativeVaildate #myForm>
+                <input required ="text"  name="name" placeholder="Your name..." #formName>
+                <input required ="text" placeholder="Your email..." #formEmail>
+                <textarea required ="message" id="" cols="30" rows="10" placeholder="Your message..." #formMessage></textarea>
                 <p>I've reat the <a href="">privacy policy</a> and afree to the processing of my data as outlined.</p>
-                <button>Send message </button>
+                <button #formButton>Send message </button>
             </form></span>
             <a href="#headline"><img class="up-btn" src="assets/img/contact-section/Go up button.png"></a>
     </div>

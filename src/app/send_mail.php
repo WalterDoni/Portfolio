@@ -3,7 +3,7 @@
 ########### CONFIG ###############
 
 $recipient = 'walter.doni@gmx.at'; # Bitte hier deine E-Mail angeben
-$redirect = 'https://walter-doni.developerakademie.net/index.html'; 
+$redirect = 'https://walter-doni.at';  //portfolio-mathias-kohler/
 
 ########### CONFIG END ###########
 
@@ -40,7 +40,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         exit;
     case ("POST"): //Send the email;
 
-        $subject = "Contact From " . $_POST['name'];
+        $subject = "Contact From " . $_POST['name'] . " " . $_POST['email'];
         $headers = "From:  noreply@developerakademie.com";
 
         mail($recipient, $subject, $_POST['message'], $headers);
