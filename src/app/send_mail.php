@@ -3,7 +3,7 @@
 ########### CONFIG ###############
 
 $recipient = 'walter.doni@gmx.at'; # Bitte hier deine E-Mail angeben
-$redirect = 'https://walter-doni.at';  //portfolio-mathias-kohler/
+$redirect = 'https://walter-doni.at';  
 
 ########### CONFIG END ###########
 

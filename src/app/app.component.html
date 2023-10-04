@@ -1,3 +1,4 @@
+<div [ngClass]="{'d-none' : !toggleVisibility}">
 <app-header></app-header>
 <app-headline-section></app-headline-section>
 <app-about-me-section></app-about-me-section>
@@ -6,4 +7,6 @@
 <app-projects-section></app-projects-section>
 <app-contact-section></app-contact-section>
 <app-footer></app-footer>
+</div>
+<app-imprint [ngClass]="{'d-none' : toggleVisibility}"></app-imprint>
 <router-outlet></router-outlet>

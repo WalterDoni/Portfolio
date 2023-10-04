@@ -16,6 +16,7 @@
         text-decoration: none;
 
         &:hover {
+            cursor: pointer;
             text-decoration: underline solid #00BEE8;
             text-shadow: 0px 0px 8px rgba(0, 190, 232, 0.4);
 

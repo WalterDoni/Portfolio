@@ -11,6 +11,7 @@ import { ProjectsSectionComponent } from './projects-section/projects-section.co
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ImprintComponent } from './imprint/imprint.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
      ProjectsSectionComponent,
      ContactSectionComponent,
      FooterComponent,
+     ImprintComponent,
   
   ],
   imports: [

@@ -6,18 +6,46 @@
     <div class="contact-formular-message">
         <span class="halfwidth" style="margin-bottom: 25px;">
             <h3>Got a problem so solve?</h3>
-         <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p>
-         <p>Need a Frontend developer? <b>Contact me!</b></p>
+            <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+                projects with my work.</p>
+            <p>Need a Frontend developer? <b>Contact me!</b></p>
         </span>
-        <span  class="halfwidth" style="display: flex; justify-content: center;" >
-            <form (submit)="sendMail()" ngNativeVaildate #myForm>
-                <input required ="text"  name="name" placeholder="Your name..." #formName>
-                <input required ="text" placeholder="Your email..." #formEmail>
-                <textarea required ="message" id="" cols="30" rows="10" placeholder="Your message..." #formMessage></textarea>
-                <p>I've reat the <a href="">privacy policy</a> and afree to the processing of my data as outlined.</p>
-                <button #formButton>Send message </button>
-            </form></span>
-            <a href="#headline"><img class="up-btn" src="assets/img/contact-section/Go up button.png"></a>
+        <span class="halfwidth" style="display: flex; justify-content: center;">
+            <form (submit)="sendMail()" #myForm>
+                <div style="width: 100%;">
+                    <input type="text" name="name" placeholder="Your name..." #formName
+                        (keyup)="onInputChangeN(formName.value)" [ngClass]="{'alert-border' : alertBorderName}"
+                        [ngClass]="{'green-border' : greenBorderName}">
+                    <p class="alertForm d-none" #formNameAlert> Your name is required.</p>
+                </div>
+                <div style="width: 100%;">
+                    <input type="text" placeholder="Your email..." #formEmail (keyup)="onInputChangeE(formEmail.value)"
+                        [ngClass]="{'alert-border' : alertBorderEmail}" [ngClass]="{'green-border' : greenBorderEmail}">
+                    <p class="alertForm d-none" #formEmailAlert> A correct email is required.</p>
+                </div>
+                <div style="width: 100%;">
+                    <textarea type="message" id="" cols="30" rows="10" placeholder="Your message..." #formMessage
+                        (keyup)="onInputChangeM(formMessage.value)" [ngClass]="{'alert-border' : alertBorderMessage}"
+                        [ngClass]="{'green-border' : greenBorderMessage}"></textarea>
+                    <p class="alertForm d-none" #formMessageAlert> Your message is empty.</p>
+                </div>
+
+                <div style="display: flex; height: 50px;"><input style="width: 25px; margin-bottom: 0 !important;"
+                        type="checkbox" #formPrivacy (change)="toggleDisabledButton(formPrivacy.checked)">
+                    <p style="padding-left: 10px; display: flex;align-items: center;">I've read the <a href="">
+                            privacy policy </a> and free to the
+                        processing of my data as outlined.</p>
+                </div>
+
+                <button #formButton [disabled]="disabledButton"
+                    [ngStyle]="{'background-color': !disabledButton ? '' : 'lightgray'}"
+                    [ngClass]="{'disabled-button': disabledButton}">Send message</button>
+
+            </form>
+        </span>
+        <a href="#headline"><img class="up-btn" src="assets/img/contact-section/Go up button.png"></a>
     </div>
-    <img class="bg-img" src="assets/img/contact-section/backgrpund.png" >
+    <img class="bg-img" src="assets/img/contact-section/backgrpund.png">
+
+    <div class="emailSuccess" #emailSuccess>Thank you! I will answer your email as soon as possible. :) </div>
 </div>
