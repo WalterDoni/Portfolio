@@ -120,7 +120,9 @@
         }
 
         a {
-            color: #4B47FF;
+            padding-left: 4px;
+            padding-right: 4px;
+            color: #00BEE8;
             text-decoration: none;
         }
 
@@ -202,12 +204,12 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0; // Starte mit einer Opazität von 0
-    transition: opacity 0.5s ease; // Übergangseigenschaften definieren
-    pointer-events: none; // Verhindere, dass Klicks während der Animation ausgelöst werden
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    pointer-events: none; 
   }
   
   .emailSuccess.show {
-    opacity: 1; // Ändere die Opazität auf 1, um das Element einzublenden
-    pointer-events: auto; // Aktiviere Klicks, wenn das Element sichtbar ist
+    opacity: 1; 
+    pointer-events: auto; 
   }
