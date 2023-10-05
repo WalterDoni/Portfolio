@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToggleVisibilityService } from '../global-variable';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,10 @@ import { Component } from '@angular/core';
 
 
 export class HeaderComponent {
+
+  
+  constructor(private toggleService: ToggleVisibilityService) {}
+  
   burgermenu = false;
 
 
@@ -25,5 +30,8 @@ export class HeaderComponent {
   }
 
 
+  disableImprint() {
+    this.toggleService.toggleVisibility = true;
+  }
 
 }

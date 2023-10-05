@@ -8,7 +8,7 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
 import { MySkillsSectionComponent } from './my-skills-section/my-skills-section.component';
 import { PortfolioHeadlineComponent } from './portfolio-headline/portfolio-headline.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
-import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { ContactSectionComponent } from './contact-section/ContactSectionComponent';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ImprintComponent } from './imprint/imprint.component';

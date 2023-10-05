@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
-import { timeout } from 'rxjs';
+import { ToggleVisibilityService } from '../global-variable';
+
 
 @Component({
   selector: 'app-contact-section',
@@ -27,7 +28,9 @@ export class ContactSectionComponent {
   greenBorderEmail = false;
   greenBorderMessage = false;
 
-  constructor(private renderer: Renderer2) {}
+
+  constructor(private renderer: Renderer2, private toggleService: ToggleVisibilityService) { }
+
 
 
   toggleDisabledButton(checked: boolean) {
@@ -61,8 +64,8 @@ export class ContactSectionComponent {
         method: 'POST',
         body: fd
       }
-    )
-    
+    );
+
     this.renderer.addClass(this.emailSuccess.nativeElement, 'show');
     formName.disabled = false;
     formEmail.disabled = false;
@@ -76,10 +79,10 @@ export class ContactSectionComponent {
     this.greenBorderName = false;
     this.greenBorderEmail = false;
     this.greenBorderMessage = false;
-  
-  setTimeout(() => {
-    this.renderer.removeClass(this.emailSuccess.nativeElement, 'show');
-  }, 2000);
+
+    setTimeout(() => {
+      this.renderer.removeClass(this.emailSuccess.nativeElement, 'show');
+    }, 2000);
 
   }
 
@@ -117,38 +120,42 @@ export class ContactSectionComponent {
   }
 
 
-  
+
   onInputChangeN(value: string) {
-   
+
     if (value.length > 1) {
-     this.greenBorderName  = true;
+      this.greenBorderName = true;
     } else {
       this.greenBorderName = false;
     }
- 
+
   }
-   
+
   onInputChangeE(value: string) {
-   
-   let trimmedValue = value.trim();
+
+    let trimmedValue = value.trim();
     if (value.length > 1 && trimmedValue.includes('@')) {
-      this.greenBorderEmail  = true;
-     } else {
-       this.greenBorderEmail = false;
-     }
+      this.greenBorderEmail = true;
+    } else {
+      this.greenBorderEmail = false;
+    }
 
   }
 
-   
+
   onInputChangeM(value: string) {
-   
-     if (value.length > 1) {
-      this.greenBorderMessage  = true;
-     } else {
-       this.greenBorderMessage = false;
-     }
+
+    if (value.length > 1) {
+      this.greenBorderMessage = true;
+    } else {
+      this.greenBorderMessage = false;
+    }
   }
 
+
+
+  showImprint() {
+    this.toggleService.toggleVisibility = false;
+  }
 
 }
-

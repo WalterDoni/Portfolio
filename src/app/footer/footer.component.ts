@@ -13,6 +13,9 @@ export class FooterComponent {
   toggleVisibility() {
     this.toggleService.toggleVisibility = !this.toggleService.toggleVisibility;
   }
-
+  
+  disableImprint() {
+    this.toggleService.toggleVisibility = true;
+  }
 }
 
