@@ -124,6 +124,11 @@
             padding-right: 4px;
             color: #00BEE8;
             text-decoration: none;
+            cursor: pointer;
+
+            &:hover{
+                text-decoration: underline;
+            }
         }
 
         @media(max-width: 1320px) {
@@ -212,4 +217,13 @@
   .emailSuccess.show {
     opacity: 1; 
     pointer-events: auto; 
+  }
+
+  .policy{
+    padding-left: 10px;
+    padding-top: 12px;
+
+    @media(max-width: 710px){
+        padding-top: 0;
+    }
   }
