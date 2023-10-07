@@ -121,7 +121,7 @@
 
         @media(max-width: 1350px) {
             font-size: 80px;
-            margin-right: 100px;
+           
         }
 
         @media(max-width: 1320px) {
@@ -197,7 +197,7 @@
     background-color: #4B47FF;
 
     @media(max-width:1320px) {
-        margin-top: 0;
+        margin-top: 100px;
         position: absolute;
         right: 0;
         top: 169px;
@@ -208,12 +208,16 @@
         top: 145px;
     }
 
-    @media(max-width:480px) {
-        top: 120px;
+    @media(max-width:526px) {
+        top: 45px;
     }
 
-    @media(max-width:380px) {
-        top: 100px;
+    @media(max-width:456px) {
+        top: 19px;
+    }
+
+    @media(max-width:356px) {
+        top: -5px;
     }
 
 }
