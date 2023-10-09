@@ -2,7 +2,7 @@
 
 ########### CONFIG ###############
 
-$recipient = 'walter.doni@gmx.at'; # Bitte hier deine E-Mail angeben
+$recipient = 'mail@walter-doni.at'; # Bitte hier deine E-Mail angeben
 $redirect = 'https://walter-doni.at';  
 
 ########### CONFIG END ###########
