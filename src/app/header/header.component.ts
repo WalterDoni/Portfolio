@@ -21,11 +21,10 @@ export class HeaderComponent {
 
     if (this.burgermenu == false) {
       this.burgermenu = true;
-      console.log(this.burgermenu);
 
     } else {
       this.burgermenu = false;
-      console.log(this.burgermenu);
+  
     }
   }
 
