@@ -18,7 +18,6 @@ export class PortfolioHeadlineComponent implements AfterViewInit {
    */
   ngAfterViewInit() {
     this.hiddenElements = this.elementRef.nativeElement.querySelectorAll('.hidden');
-    
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -28,7 +27,6 @@ export class PortfolioHeadlineComponent implements AfterViewInit {
         }
       });
     });
-
     this.hiddenElements.forEach((el) => this.observer.observe(el));
   }
 

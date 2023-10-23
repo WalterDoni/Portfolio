@@ -17,7 +17,6 @@ export class ProjectsSectionComponent implements AfterViewInit {
    */
   ngAfterViewInit() {
     this.hiddenElements = this.elementRef.nativeElement.querySelectorAll('.hidden');
-    
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -27,7 +26,6 @@ export class ProjectsSectionComponent implements AfterViewInit {
         }
       });
     });
-
     this.hiddenElements.forEach((el) => this.observer.observe(el));
   }
 }

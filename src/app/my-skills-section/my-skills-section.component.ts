@@ -20,7 +20,6 @@ skill_names = ['Angular','TypeScript','Javascript','HTML','Firebase','Git','CSS'
    */
   ngAfterViewInit() {
     this.hiddenElements = this.elementRef.nativeElement.querySelectorAll('.hidden');
-    
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -30,7 +29,6 @@ skill_names = ['Angular','TypeScript','Javascript','HTML','Firebase','Git','CSS'
         }
       });
     });
-
     this.hiddenElements.forEach((el) => this.observer.observe(el));
   }
 

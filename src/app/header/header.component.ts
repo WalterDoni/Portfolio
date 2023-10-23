@@ -16,18 +16,13 @@ export class HeaderComponent {
   
   burgermenu = false;
 
-
   showMenu() {
-
     if (this.burgermenu == false) {
       this.burgermenu = true;
-
     } else {
       this.burgermenu = false;
-  
     }
   }
-
 
   disableImprint() {
     this.toggleService.toggleVisibility = true;

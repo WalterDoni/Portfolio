@@ -133,7 +133,6 @@ export class ContactSectionComponent {
     } else {
       this.formEmailAlert.nativeElement.classList.add('d-none');
     }
-
     if (formMessage.value === '') {
       this.formMessageAlert.nativeElement.classList.remove('d-none');
       isValid = false;
@@ -141,14 +140,10 @@ export class ContactSectionComponent {
     } else {
       this.formMessageAlert.nativeElement.classList.add('d-none');
     }
-
     return isValid;
   }
 
-
-
   onInputChangeName(value: string) {
-
     if (value.length > 1) {
       this.greenBorderName = true;
     } else {
@@ -158,7 +153,6 @@ export class ContactSectionComponent {
   }
 
   onInputChangeEmail(value: string) {
-
     let trimmedValue = value.trim();
     if (value.length > 1 && trimmedValue.includes('@')) {
       this.greenBorderEmail = true;
@@ -168,17 +162,13 @@ export class ContactSectionComponent {
 
   }
 
-
   onInputChangeMessage(value: string) {
-
     if (value.length > 1) {
       this.greenBorderMessage = true;
     } else {
       this.greenBorderMessage = false;
     }
   }
-
-
 
   showImprint() {
     this.toggleService.toggleVisibility = false;
