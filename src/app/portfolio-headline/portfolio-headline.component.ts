@@ -12,7 +12,10 @@ export class PortfolioHeadlineComponent implements AfterViewInit {
   hiddenElements!: NodeListOf<HTMLElement>;
 
   constructor(private elementRef: ElementRef) {}
-
+ 
+  /**
+   * Described at about-me-section.component.ts
+   */
   ngAfterViewInit() {
     this.hiddenElements = this.elementRef.nativeElement.querySelectorAll('.hidden');
     

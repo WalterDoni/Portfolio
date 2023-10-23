@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeadlineSectionComponent {
 
-  
-
   scroll(el: HTMLElement) {
     el.scrollIntoView();
 }

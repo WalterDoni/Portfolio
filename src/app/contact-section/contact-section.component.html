@@ -14,18 +14,18 @@
             <form (submit)="sendMail()" #myForm>
                 <div style="width: 100%;">
                     <input type="text" name="name" placeholder="Your name..." #formName
-                        (keyup)="onInputChangeN(formName.value)" [ngClass]="{'alert-border' : alertBorderName}"
+                        (keyup)="onInputChangeName(formName.value)" [ngClass]="{'alert-border' : alertBorderName}"
                         [ngClass]="{'green-border' : greenBorderName}">
                     <p class="alertForm d-none" #formNameAlert> Your name is required.</p>
                 </div>
                 <div style="width: 100%;">
-                    <input type="text" placeholder="Your email..." #formEmail (keyup)="onInputChangeE(formEmail.value)"
+                    <input type="text" placeholder="Your email..." #formEmail (keyup)="onInputChangeEmail(formEmail.value)"
                         [ngClass]="{'alert-border' : alertBorderEmail}" [ngClass]="{'green-border' : greenBorderEmail}">
                     <p class="alertForm d-none" #formEmailAlert> A correct email is required.</p>
                 </div>
                 <div style="width: 100%;">
                     <textarea type="message" id="" cols="30" rows="10" placeholder="Your message..." #formMessage
-                        (keyup)="onInputChangeM(formMessage.value)" [ngClass]="{'alert-border' : alertBorderMessage}"
+                        (keyup)="onInputChangeMessage(formMessage.value)" [ngClass]="{'alert-border' : alertBorderMessage}"
                         [ngClass]="{'green-border' : greenBorderMessage}"></textarea>
                     <p class="alertForm d-none" #formMessageAlert> Your message is empty.</p>
                 </div>

@@ -8,6 +8,8 @@ import { ToggleVisibilityService } from '../global-variable';
   styleUrls: ['./contact-section.component.scss']
 })
 export class ContactSectionComponent {
+
+  //-Variables for Contactform-//
   @ViewChild('myForm') myFrom!: ElementRef;
   @ViewChild('formName') formName!: ElementRef;
   @ViewChild('formEmail') formEmail!: ElementRef | any;
@@ -18,8 +20,13 @@ export class ContactSectionComponent {
   @ViewChild('formMessageAlert') formMessageAlert!: ElementRef;
   @ViewChild('emailSuccess', { static: false }) emailSuccess!: ElementRef;
   @Input() required!: boolean | string;
+
+
+  //-Send button-//
   disabledButton = true;
 
+
+  //-Bordercolors -> green or red-//
   alertBorderName = false;
   alertBorderEmail = false;
   alertBorderMessage = false;
@@ -31,47 +38,69 @@ export class ContactSectionComponent {
 
   constructor(private renderer: Renderer2, private toggleService: ToggleVisibilityService) { }
 
-
-
   toggleDisabledButton(checked: boolean) {
     this.disabledButton = !checked;
   }
 
+  /**
+   * Send an email when every neccessary inputfield is filled. Disable the form, and after the email has been sent, reset it and make it available again.
+   */
   async sendMail(): Promise<void> {
-
     let formName = this.formName.nativeElement;
     let formEmail = this.formEmail.nativeElement;
     let formMessage = this.formMessage.nativeElement;
     let formButton = this.formButton.nativeElement;
-
     if (!this.checkValidateForm(formName, formEmail, formMessage)) {
       return;
     }
+    this.disableForm(formName, formEmail, formMessage, formButton);
+    await this.sendViaPHP(formName, formEmail, formMessage);
+    this.enableForm(formName, formEmail, formMessage, formButton);
+    this.resetForm(formName, formEmail, formMessage, formButton);
+  }
 
+  /**
+   * Disable the form and allow no changes in the form till the email has been send.
+   */
+  disableForm(formName: { disabled: boolean; }, formEmail: { disabled: boolean; }, formMessage: { disabled: boolean; }, formButton: { disabled: boolean; }) {
     formName.disabled = true;
     formEmail.disabled = true;
     formMessage.disabled = true;
     formButton.disabled = true;
+  }
 
+  /**
+   * Send the mail -> send_mail.php
+   */
+  async sendViaPHP(formName: { value: string | Blob; }, formEmail: { value: string | Blob; }, formMessage: { value: string | Blob; }) {
     let fd = new FormData();
     fd.append('name', formName.value);
     fd.append('email', formEmail.value);
     fd.append('message', formMessage.value);
 
     await fetch('https://walter-doni.at/send_mail/send_mail.php',
-
       {
         method: 'POST',
         body: fd
       }
     );
+  }
 
+  /**
+    * Enable the form after the email has been send.
+    */
+  enableForm(formName: { disabled: boolean; }, formEmail: { disabled: boolean; }, formMessage: { disabled: boolean; }, formButton: { disabled: boolean; }) {
     this.renderer.addClass(this.emailSuccess.nativeElement, 'show');
     formName.disabled = false;
     formEmail.disabled = false;
     formMessage.disabled = false;
     formButton.disabled = false;
+  }
 
+  /**
+   * Reset the whole form and show the success window.
+   */
+  resetForm(formName: { value: string; }, formEmail: { value: string; }, formMessage: { value: string; }, formButton: { value: string; }) {
     formName.value = '';
     formEmail.value = '';
     formMessage.value = '';
@@ -79,15 +108,12 @@ export class ContactSectionComponent {
     this.greenBorderName = false;
     this.greenBorderEmail = false;
     this.greenBorderMessage = false;
-
     setTimeout(() => {
       this.renderer.removeClass(this.emailSuccess.nativeElement, 'show');
     }, 2000);
-
   }
 
   checkValidateForm(formName: { value: string; }, formEmail: { value: string; }, formMessage: { value: string; }): boolean {
-
     let isValid = true;
     this.alertBorderName = false;
     this.alertBorderEmail = false;
@@ -121,7 +147,7 @@ export class ContactSectionComponent {
 
 
 
-  onInputChangeN(value: string) {
+  onInputChangeName(value: string) {
 
     if (value.length > 1) {
       this.greenBorderName = true;
@@ -131,7 +157,7 @@ export class ContactSectionComponent {
 
   }
 
-  onInputChangeE(value: string) {
+  onInputChangeEmail(value: string) {
 
     let trimmedValue = value.trim();
     if (value.length > 1 && trimmedValue.includes('@')) {
@@ -143,7 +169,7 @@ export class ContactSectionComponent {
   }
 
 
-  onInputChangeM(value: string) {
+  onInputChangeMessage(value: string) {
 
     if (value.length > 1) {
       this.greenBorderMessage = true;

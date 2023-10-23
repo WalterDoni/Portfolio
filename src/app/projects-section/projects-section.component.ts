@@ -12,6 +12,9 @@ export class ProjectsSectionComponent implements AfterViewInit {
 
   constructor(private elementRef: ElementRef) {}
   
+  /**
+   * Described at about-me-section.component.ts
+   */
   ngAfterViewInit() {
     this.hiddenElements = this.elementRef.nativeElement.querySelectorAll('.hidden');
     

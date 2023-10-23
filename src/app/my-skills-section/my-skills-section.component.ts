@@ -7,14 +7,17 @@ import { Component,AfterViewInit, ElementRef  } from '@angular/core';
 })
 
 export class MySkillsSectionComponent implements AfterViewInit{
-  skill_images = ['Angular.png','TypeScript.png','Javascript.png','HTML.png','Firebase.png','GitHub.png','CSS.png','Rest-Api.png','scrum.png','Materialdesign.png'];
-skill_names = ['Angular','TypeScript','Javascript','HTML','Firebase','GitHub','CSS','Rest-Api','Scrum','Materialdesign'];
+skill_images = ['Angular.png','TypeScript.png','Javascript.png','HTML.png','Firebase.png','GitHub.png','CSS.png','Rest-Api.png','scrum.png','Materialdesign.png'];
+skill_names = ['Angular','TypeScript','Javascript','HTML','Firebase','Git','CSS','Rest-Api','Scrum','Materialdesign'];
 
   observer!: IntersectionObserver;
   hiddenElements!: NodeListOf<HTMLElement>;
 
   constructor(private elementRef: ElementRef) {}
 
+  /**
+   * Described at about-me-section.component.ts
+   */
   ngAfterViewInit() {
     this.hiddenElements = this.elementRef.nativeElement.querySelectorAll('.hidden');
     
