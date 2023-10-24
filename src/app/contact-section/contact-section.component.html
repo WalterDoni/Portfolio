@@ -5,41 +5,39 @@
     </div>
     <div class="contact-formular-message">
         <span class="halfwidth" style="margin-bottom: 25px;">
-            <h3>Got a problem to solve?</h3>
-            <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
-                projects with my work.</p>
-            <p>Need a Frontend developer? <b>Contact me!</b></p>
+            <h3 translate>Want to know more about me? Need a Front-End developer?</h3>
+            <p translate>Contact me via this formular. I will reply as soon as possible if you have any questions or would like to know more.</p>
         </span>
         <span class="halfwidth" style="display: flex; justify-content: center;">
             <form (submit)="sendMail()" #myForm>
                 <div style="width: 100%;">
-                    <input type="text" name="name" placeholder="Your name..." #formName
+                    <input type="text" name="name"  [placeholder]="'Your name...' | translate" #formName
                         (keyup)="onInputChangeName(formName.value)" [ngClass]="{'alert-border' : alertBorderName}"
                         [ngClass]="{'green-border' : greenBorderName}">
-                    <p class="alertForm d-none" #formNameAlert> Your name is required.</p>
+                    <p class="alertForm d-none" #formNameAlert translate>Your name is required.</p>
                 </div>
                 <div style="width: 100%;">
-                    <input type="text" placeholder="Your email..." #formEmail (keyup)="onInputChangeEmail(formEmail.value)"
+                    <input type="text"  [placeholder]="'Your email...' | translate"  #formEmail (keyup)="onInputChangeEmail(formEmail.value)"
                         [ngClass]="{'alert-border' : alertBorderEmail}" [ngClass]="{'green-border' : greenBorderEmail}">
-                    <p class="alertForm d-none" #formEmailAlert> A correct email is required.</p>
+                    <p class="alertForm d-none" #formEmailAlert translate>A correct email is required.</p>
                 </div>
                 <div style="width: 100%;">
-                    <textarea type="message" id="" cols="30" rows="10" placeholder="Your message..." #formMessage
+                    <textarea type="message" id="" cols="30" rows="10"  [placeholder]="'Your message...' | translate"  #formMessage
                         (keyup)="onInputChangeMessage(formMessage.value)" [ngClass]="{'alert-border' : alertBorderMessage}"
                         [ngClass]="{'green-border' : greenBorderMessage}"></textarea>
-                    <p class="alertForm d-none" #formMessageAlert> Your message is empty.</p>
+                    <p class="alertForm d-none" #formMessageAlert translate>Your message is empty.</p>
                 </div>
 
                 <div style="display: flex; height: 50px;"><input style="width: 25px; margin-bottom: 0 !important;"
                         type="checkbox" #formPrivacy (change)="toggleDisabledButton(formPrivacy.checked)">
-                    <p class="policy">I have read the <a style= "cursor: pointer;"(click) = "showImprint()">
-                            privacy policy </a>and free to the
-                        processing of my data as outlined.</p>
+                    <p class="policy"><span translate>I have read the </span><a style= "cursor: pointer;"(click) = "showImprint()" translate>
+                            privacy policy </a><span translate>and free to the
+                                processing of my data as outlined.</span></p>
                 </div>
 
                 <button #formButton [disabled]="disabledButton"
                     [ngStyle]="{'background-color': !disabledButton ? '' : 'lightgray'}"
-                    [ngClass]="{'disabled-button': disabledButton}">Send message</button>
+                    [ngClass]="{'disabled-button': disabledButton}" translate>Send message</button>
 
             </form>
         </span>
@@ -47,5 +45,5 @@
     </div>
     <img class="bg-img" src="assets/img/contact-section/backgrpund.png">
 
-    <div class="emailSuccess" #emailSuccess>Thank you! I will answer your email as soon as possible. :) </div>
+    <div class="emailSuccess" #emailSuccess translate>Thank you! I will answer your email as soon as possible.:)</div>
 </div>

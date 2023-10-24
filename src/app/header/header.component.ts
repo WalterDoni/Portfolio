@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ToggleVisibilityService } from '../global-variable';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ import { ToggleVisibilityService } from '../global-variable';
 export class HeaderComponent {
 
   
-  constructor(private toggleService: ToggleVisibilityService) {}
+  constructor(private toggleService: ToggleVisibilityService,public translate: TranslateService) {}
   
   burgermenu = false;
 
@@ -27,5 +28,9 @@ export class HeaderComponent {
   disableImprint() {
     this.toggleService.toggleVisibility = true;
   }
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
 
 }

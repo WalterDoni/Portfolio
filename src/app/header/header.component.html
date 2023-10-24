@@ -6,8 +6,10 @@
             <p class="letter-r">r</p>
         </span></a>
     <span class="links">
-        <a href="#aboutMe" (click) ="disableImprint()">About me</a>
-        <a href="#mySkills" (click) ="disableImprint()">Skills</a>
+        <a (click)="useLanguage('en')">EN</a>
+        <a (click)="useLanguage('de')">DE</a>
+        <a href="#aboutMe" (click) ="disableImprint()" translate>About me</a>
+        <a href="#mySkills" (click) ="disableImprint()"translate>Skills</a>
         <a href="#portfolio" (click) ="disableImprint()">Portfolio</a>
     </span>
 
@@ -16,8 +18,10 @@
     </div>
 
     <div class="resp-menu-container" [class.active-menu]="burgermenu">
-        <a href="#aboutMe" (click) ="disableImprint()">About me</a>
-        <a href="#mySkills" (click) ="disableImprint()">My skills</a>
+        <a (click)="useLanguage('en')">EN</a>
+        <a (click)="useLanguage('de')">DE</a>
+        <a href="#aboutMe" (click) ="disableImprint()" translate>About me</a>
+        <a href="#mySkills" (click) ="disableImprint()"translate>Skills</a>
         <a href="#portfolio" (click) ="disableImprint()">Portfolio</a>
         <a href="#contactMe" (click) ="disableImprint()">Contact</a>
 
