@@ -42,17 +42,17 @@
     padding-left: 100px;
     gap: 54px;
     z-index: 2;
-    
-    div{
-        display: flex; 
-        justify-content: center; 
-        align-items: center ;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         padding-right: 65px;
 
         @media(max-width:1320px) {
-           padding-right: 0;
-         }
+            padding-right: 0;
+        }
     }
 
 
@@ -64,21 +64,21 @@
 
         &:hover {
             animation: moving 1s linear infinite;
-            
+
         }
 
         @media(max-width:1320px) {
-           width: 40px;
-           height: 40px;
+            width: 40px;
+            height: 40px;
         }
     }
 
     @media(max-width:1320px) {
-       
+
         padding-left: 20px;
         padding-right: 20px;
         gap: 34px;
-       
+
     }
 }
 
@@ -121,7 +121,7 @@
 
         @media(max-width: 1350px) {
             font-size: 80px;
-           
+
         }
 
         @media(max-width: 1320px) {
@@ -141,7 +141,7 @@
         margin-bottom: 20px;
 
         @media(max-width:1320px) {
-          padding-left: 20px;
+            padding-left: 20px;
         }
     }
 
@@ -156,7 +156,7 @@
         font-size: 23px;
         transition: transform 0.3s ease-in-out;
 
-        a{
+        a {
             color: white;
             text-decoration: none;
         }
@@ -169,17 +169,25 @@
             box-shadow: 0px 0px 8px 4px rgba(0, 190, 232, 0.4);
         }
 
+
+        @media(max-width: 1700px) {
+            font-size: 16px;
+        }
+
         @media(max-width:1320px) {
             position: absolute;
             top: 630px;
             right: 35%;
         }
 
-        @media(max-width: 400px){
+        @media(max-width: 400px) {
             height: 50px;
             width: 160px;
             padding: 5px 10px 5px 10px;
-           
+        }
+
+        @media(max-width: 360px) {
+            top: 800px
         }
 
     }
@@ -223,25 +231,25 @@
 }
 
 
-.bg-image{
-    position: absolute; 
+.bg-image {
+    position: absolute;
     left: 0;
     z-index: -1;
     top: 290px;
 
-    @media(max-width: 1320px){
+    @media(max-width: 1320px) {
         top: 120px;
         left: -25px;
     }
 }
 
-.hidden{
+.hidden {
     opacity: 0;
     filter: blur(5px);
     transition: 1.5s ease;
 }
 
-.show{
+.show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
