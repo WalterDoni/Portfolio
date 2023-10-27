@@ -134,10 +134,15 @@ header {
     }
 
     a {
+        cursor: pointer;
         font-size: 23px;
         text-decoration: none;
         color: white;
         padding-bottom: 20px;
+
+        &:hover{
+            color:#00BEE8;
+        }
     }
 
     @media(max-width: 1320px){
