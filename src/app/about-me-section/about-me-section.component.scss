@@ -1,4 +1,4 @@
-.about-me-section-container{
+.about-me-section-container {
     position: relative;
     display: flex;
     background-color: #141D30;
@@ -6,81 +6,143 @@
     height: 700px;
     color: white;
    
+
     @media(max-width: 1320px){
-        height: unset;
+        height: 400px;
     }
+
+    @media(max-width: 526px){
+        height: 500px;
+    }
+
+    @media(max-width: 450px){
+        height: 600px;
+    }
+
+    @media(max-width: 390px){
+        height: 700px;
+    }
+    
+    @media(max-width: 360px){
+        height: 830px;
+    }
+    
 }
 
-.about-me-container{
+.about-me-container {
     padding-left: 100px;
     padding-right: 15%;
+    max-width: 850px;
     width: 65%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap:35px;
+    gap: 26px;
     z-index: 1;
-  
 
-    h1{
-        font-size: 90px!important;
+    @media(min-width: 1920px) {
+        font-size: 24px;
+    }
 
-        @media(max-width: 1320px){
-            font-size: 45px!important;
+    @media(max-width: 600px){
+        margin-bottom: 100px;
+    }
+
+    @media(max-width: 526px){
+        margin-bottom: 150px;
+    }
+
+    @media(max-width: 360px){
+        margin-bottom: 90px;
+    }
+
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 90px !important;
+
+        @media(min-width: 1920px) {
+            font-size: 106px !important;
+        }
+
+        @media(max-width: 1320px) {
+            font-size: 45px !important;
         }
     }
 
-    
-    @media(max-width: 1320px){
+
+    @media(max-width: 1320px) {
         width: 100%;
         padding-left: 25px;
-      padding-right: 25px;
+        padding-right: 25px;
     }
 }
 
-.image-container{
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 75%;
     z-index: 2;
-    
 
-    img{
+
+    img {
         object-fit: contain;
         width: 450px;
         height: 450px;
         border-radius: 100%;
         border: 4px solid #00BEE8;
+
+        @media(min-width: 1920px) {
+            width: 500px;
+            height: 500px;
+        }
     }
 
-    
-    @media(max-width: 1320px){
+
+    @media(max-width: 1320px) {
         display: none;
     }
 }
 
-.seperator{
+.seperator {
     width: calc(100% - 450px);
     height: 4px;
     background-color: #00BEE8;
 }
 
-.bg-img{
+.bg-img {
     position: absolute;
     right: 0;
     bottom: 100px;
 }
 
-.hidden{
+.hidden {
     opacity: 0;
     filter: blur(5px);
     transition: 1.5s ease;
 }
 
-.show{
+.show {
     opacity: 1;
     filter: blur(0);
-   
+
+}
+
+.about-me-img {
+    padding-right: 25px;
+    width: 60px;
+    height: 60px;
+
+    @media(min-width: 1920px){
+        width: 80px;
+        height: 80px;
+    }
+
+    @media(max-width: 1320px){
+        width: 40px;
+        height: 40px;
+    }
 }

@@ -22,6 +22,10 @@
         padding-right: 25px;
         font-size: 90px;
 
+        @media(min-width: 1920px){
+            font-size: 106px;
+        }
+
         @media(max-width:1320px) {
             font-size: 45px;
         }
@@ -49,7 +53,16 @@
 .text {
     display: flex;
     justify-content: space-around;
-    font-size: 23px;
+    font-size: 16px;
+  
+
+    p{
+        max-width: 600px;
+
+    }
+    @media(min-width: 1920px){
+        font-size: 24px;
+    }
 
     @media(max-width:1320px) {
         font-size: 16px;

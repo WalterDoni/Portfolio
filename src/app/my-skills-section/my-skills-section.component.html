@@ -1,16 +1,26 @@
 <div class="content-container " id="mySkills">
-<div class="left-cont hidden">
-    <div class="skills-images-container">
-        <div *ngFor="let skill of skill_images; let i = index"><img src="assets/img/my-skills-section/{{skill_images[i]}}" alt="">{{skill_names[i]}}</div>
+    <div class="left-cont hidden">
+        <div class="skills-images-container">
+            <div *ngFor="let skill of skill_images; let i = index"><img
+                    src="assets/img/my-skills-section/{{skill_images[i]}}" alt="">{{skill_names[i]}}</div>
+                    <button class="btn display-under-1320 "><a href="#contactMe" translate>Get in touch</a></button>
+        </div>
     </div>
-</div>
-<div  class="right-cont hidden">
-    <div class="skills-description-container">
-        <h1 translate>My skills</h1>
-        <p translate>I have grown my Front-End developments skills that have allowed me to create different real projects.</p>
-        <button><a href="#contactMe" translate>Get in touch</a></button>
+    <div class="right-cont hidden">
+        <div class="skills-description-container">
+            <div class="headline-container">
+                <h1 translate>My skills</h1>
+                <div class="seperator"></div>
+            </div>
+
+            <p translate>Over the whole year, I focused my free time on acquiring more skills in web development. During
+                this process, my knowledge and expertise expanded continously, starting from simple static HTML websites
+                and progressing to complex web applications. You can see the technologies I have used and am familiar
+                with.</p>
+
+                <button class="btn display-till-1320"><a href="#contactMe" translate>Get in touch</a></button>
+        </div>
     </div>
-</div>
-<div class="seperator"></div>
-<img class="bg-image" src="assets/img/my-skills-section/L. blue 1.png">
+ 
+    <img class="bg-image" src="assets/img/my-skills-section/L. blue 1.png">
 </div>

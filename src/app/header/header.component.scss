@@ -23,10 +23,13 @@ header {
     font-size: 40px;
     font-weight: 700;
     
-    
     &:hover{
         cursor: pointer;
         text-shadow: 0px 0px 8px rgba(0, 190, 232, 0.4);
+     }
+
+     @media(min-width: 1920px){
+        font-size: 56px;
      }
 }
 
@@ -56,8 +59,12 @@ header {
             color: #00BEE8;
             text-shadow: 0px 0px 8px rgba(0, 190, 232, 0.4);
         }
-    }
 
+      @media(min-width: 1920px){
+        font-size: 38px;
+      }
+    }
+    
     @media(max-width: 1320px) {
         display: none;
     }

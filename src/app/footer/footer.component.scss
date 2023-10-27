@@ -58,6 +58,10 @@
         cursor: pointer;
         text-shadow: 0px 0px 8px rgba(0, 190, 232, 0.4);
      }
+
+     @media(min-width: 1920px){
+        font-size: 56px;
+     }
     
 }
 
@@ -87,15 +91,25 @@
 
         }
 
-        @media (max-width: 1320px) {
-    
-            
-         }
+        @media(min-width: 1920px){
+            height: 40px;
+          }
+
     }
+
 
     @media (max-width: 1320px) {
         padding-right: 0;
         gap: 30px;
         
      }
+}
+
+.text{
+  font-size: 16px;
+
+  @media(min-width: 1920px){
+    font-size: 24px;
+ }
+
 }
