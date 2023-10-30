@@ -5,12 +5,9 @@
     display: flex;
     color: white;
     height: 550px;
-    padding-top: 50px;
-    padding-bottom: 50px;
- 
-
-
-
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
     h3 {
         font-size: 32px;
         font-weight: 700;
@@ -37,6 +34,8 @@
         flex-direction: column;
         align-items: center;
         height: unset;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
@@ -200,7 +199,7 @@
 .bg-img1 {
     position: absolute;
     left: 0;
-    top: 4300px;
+    top: 4000px;
     z-index: 1;
 
 
