@@ -366,6 +366,7 @@
     rotate: 90deg;
     font-size: 23px;
     animation: moving 3s linear infinite;
+    z-index: 999;
 
     &:hover {
         cursor: pointer;
